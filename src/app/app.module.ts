@@ -19,7 +19,7 @@ import { MyBizDriverComponent } from './driver/my-biz-driver/my-biz-driver.compo
 import { LastAcceptedComponent } from './driver/last-accepted/last-accepted.component';
 import { MarketComponent } from './driver/market/market.component';
 import { RiderComponent } from './rider/rider.component';
-
+import { BarRatingModule } from "ngx-bar-rating";
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import { RiderComponent } from './rider/rider.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BarRatingModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

@@ -18,7 +18,7 @@ export class LoginService {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.loggedUser = user;
-        // this.router.navigate(['']);
+        //this.router.navigate(['']);
 
         // callback();
         this.onLoggedIn.next();

@@ -1,6 +1,6 @@
 <div class="row login justify-content-md-center">
   <div class="col-md-4">
-    <form (ngSubmit)="signIn(form)" #form="ngForm">
+    <form (ngSubmit)="signIn(form)">
       <div class="form-group">
         <label for="email">Email address:</label>
         <input type="email" name="email" ngModel class="form-control">
@@ -10,7 +10,7 @@
         <input type="password" name="password" ngModel class="form-control">
       </div>
       <button type="submit" class="btn btn-primary">SignIn</button>
-      <button type="button" class="btn btn-primary" (click)="signIn(form)">SignUp</button>
+      <button type="button" class="btn btn-primary" (click)="signUp(form)">SignUp</button>
     </form>
   </div>
 </div>
