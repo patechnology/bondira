@@ -1,3 +1,22 @@
-<p>
-  my-biz-driver works!
-</p>
+<form>
+  <div class="form-group">
+    <label for="business">Business Name</label>
+    <input type="text" class="form-control" id="business" placeholder="Enter Name" [readonly]="edit">
+  </div>
+  <div class="form-group">
+    <label for="bzp1">Phone 1</label>
+    <input type="text" class="form-control" id="bzp1" placeholder="Enter Phone 1" [readonly]="edit">
+  </div>
+  <div class="form-group">
+    <label for="bzp2">Phone 2</label>
+    <input type="text" class="form-control" id="bzp2" placeholder="Enter Phone 2" [readonly]="edit">
+  </div>
+  <div class="form-group">
+    <label for="address">Address</label>
+    <input type="text" class="form-control" id="address" placeholder="Enter Address" [readonly]="edit">
+  </div>
+  <button type="submit" class="btn btn-secondary" *ngIf="edit" (click)="edit=!edit">Edit</button>
+  <button type="submit" class="btn btn-primary" *ngIf="!edit" (click)="submitDetails()">Submit</button>
+</form>
+
+<bar-rating [(rate)]="val" [showText]="true" [max]="5" [theme]="'stars'" [readOnly]="true"></bar-rating>  

@@ -20,6 +20,7 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/ngx-bar-rating/themes/br-stars-theme.css",
         "styles.css"
       ],
       "scripts": [

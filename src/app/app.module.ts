@@ -21,6 +21,7 @@ import { MarketComponent } from './driver/market/market.component';
 import { RiderComponent } from './rider/rider.component';
 import { DataService } from './data.service';
 
+import { BarRatingModule } from "ngx-bar-rating";
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BarRatingModule
   ],
   providers: [LoginService, DataService],
   bootstrap: [AppComponent]
