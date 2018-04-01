@@ -1,0 +1,19 @@
+<div class="card mt-50">
+  <div class="card-header">
+    What is your business nature?
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Select Category</h5>
+    <form #form="ngForm">
+      <div class="radio">
+        <label>
+          <input type="radio" [ngModel]="'driver'" name="type" value="driver">I am driver with car</label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" [ngModel]="'rider'" name="type" value="rider">I need a car</label>
+      </div>
+      <button type="button" (click)="onSelect(form.value.type)" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 
 import * as firebase from 'firebase';
 import { Subject } from 'rxjs/Subject';
+import { DataService } from '../data.service';
 
 @Injectable()
 export class LoginService {
@@ -12,15 +13,25 @@ export class LoginService {
   confirmation;
   recaptchaVerifier;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private dataService: DataService) { }
 
   init(callback: () => void) {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.loggedUser = user;
-        //this.router.navigate(['']);
-
         callback();
+        this.dataService.getUserType().then((data) => {
+          if (data && data.type) {
+            if (data.type === 'rider') {
+              this.router.navigate(['rider/my-biz']);
+            } else {
+              this.router.navigate(['driver/my-biz']);
+            }
+          } else {
+            this.router.navigate(['select-category']);
+          }
+        });
         this.onLoggedIn.next();
       } else {
         // this.router.navigate(['login']);

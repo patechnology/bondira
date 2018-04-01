@@ -20,8 +20,8 @@ import { LastAcceptedComponent } from './driver/last-accepted/last-accepted.comp
 import { MarketComponent } from './driver/market/market.component';
 import { RiderComponent } from './rider/rider.component';
 import { DataService } from './data.service';
-
 import { BarRatingModule } from "ngx-bar-rating";
+import { CategoryComponent } from './login/category/category.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,8 @@ import { BarRatingModule } from "ngx-bar-rating";
     MyBizDriverComponent,
     LastAcceptedComponent,
     MarketComponent,
-    RiderComponent
+    RiderComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
