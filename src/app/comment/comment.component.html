@@ -1,6 +1,6 @@
 
 
-  <h3>COMMENT BOX</h3>
+  <h5>COMMENT BOX</h5>
 
   <!------------Form Start---------->
 
@@ -9,17 +9,17 @@
 
         <form action="" method="POST" id="commentform">
 
-          <div id="comment-name" class="form-row margin-bottom">
-            <input type="text" placeholder="Name (required)" name="dname" id="name">
+          <div id="comment-name" class="form-group">
+            <input type="text" class="form-control" placeholder="Name (required)" name="dname" id="name">
           </div>
-          <div id="comment-email" class="form-row margin-bottom">
-            <input type="text" placeholder="Mail (will not be published) (required)" name="demail" id="email">
+          <div id="comment-email" class="form-group">
+            <input type="text" class="form-control" placeholder="Mail (required)" name="demail" id="email">
           </div>
-          <div id="comment-message" class="form-row margin-bottom">
-            <textarea name="comment" placeholder="Message" id="comment"></textarea>
+          <div id="comment-message" class="form-group">
+            <textarea name="comment" class="form-control" placeholder="Message" id="comment"></textarea>
           </div>
           <a href="#">
-            <input type="submit" name="dsubmit" class="margin-bottom" id="commentSubmit" value="Submit Comment">
+            <input type="submit" name="dsubmit" class="btn btn-primary" id="commentSubmit" value="Submit Comment">
           </a>
         </form>
 

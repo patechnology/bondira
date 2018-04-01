@@ -11,6 +11,7 @@ import { CommentComponent } from './comment/comment.component';
 import { HomeComponent } from './home/home.component';
 import { LoginService } from './login/login.service';
 import { PhoneComponent } from './login/phone/phone.component';
+import { DriverComponent } from './driver/driver.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PhoneComponent } from './login/phone/phone.component';
     LoginComponent,
     CommentComponent,
     HomeComponent,
-    PhoneComponent
+    PhoneComponent,
+    DriverComponent
   ],
   imports: [
     BrowserModule,

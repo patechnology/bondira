@@ -1,8 +1,7 @@
-hr{
-    background-color: black;
+.mt-50{
+    margin-top: 50px;
 }
-.li-element{
-    background-color: #212121 !important;
+.list-ele{
     cursor: pointer;
-    color: blue;
+    color: #007bff;
 }
