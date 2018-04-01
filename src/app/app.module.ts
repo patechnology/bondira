@@ -18,6 +18,7 @@ import { MyBizComponent } from './rider/my-biz/my-biz.component';
 import { MyBizDriverComponent } from './driver/my-biz-driver/my-biz-driver.component';
 import { LastAcceptedComponent } from './driver/last-accepted/last-accepted.component';
 import { MarketComponent } from './driver/market/market.component';
+import { RiderComponent } from './rider/rider.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MarketComponent } from './driver/market/market.component';
     MyBizComponent,
     MyBizDriverComponent,
     LastAcceptedComponent,
-    MarketComponent
+    MarketComponent,
+    RiderComponent
   ],
   imports: [
     BrowserModule,

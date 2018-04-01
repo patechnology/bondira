@@ -1,0 +1,24 @@
+<div style="margin-top: 50px">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active' : activeTab === 'my-biz'}" id="home-tab" data-toggle="tab" routerLink="/rider/my-biz" role="tab" aria-controls="home" aria-selected="true">My Business</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active' : activeTab === 'my-order'}" id="profile-tab" data-toggle="tab" routerLink="/rider/my-order" role="tab" aria-controls="profile" aria-selected="false">My Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active' : activeTab === 'new-order'}" id="contact-tab" data-toggle="tab" routerLink="/rider/new-order" role="tab" aria-controls="contact" aria-selected="false">New Order</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" [ngClass]="{'active show' : activeTab === 'my-biz'}" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <app-my-biz></app-my-biz>
+        </div>
+        <div class="tab-pane fade" [ngClass]="{'active show' : activeTab === 'my-order'}" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <app-my-order></app-my-order>
+        </div>
+        <div class="tab-pane fade" [ngClass]="{'active show' : activeTab === 'new-order'}" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+          <app-new-order></app-new-order>
+        </div>
+      </div>
+</div>

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-driver',
-  templateUrl: './driver.component.html',
-  styleUrls: ['./driver.component.css']
+  selector: 'app-rider',
+  templateUrl: './rider.component.html',
+  styleUrls: ['./rider.component.css']
 })
-export class DriverComponent implements OnInit {
+export class RiderComponent implements OnInit {
   activeTab = 'my-biz';
 
   constructor(private route: ActivatedRoute) { }
@@ -17,4 +17,5 @@ export class DriverComponent implements OnInit {
       this.activeTab = data['tab'];
     });
   }
+
 }
