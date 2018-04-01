@@ -14,19 +14,13 @@ export class LoginService {
 
   constructor(private router: Router) { }
 
-  init(callback: Function) {
+  init() {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.loggedUser = user;
-        if (user.displayName) {
-          this.isLoggedIn = true;
-          if (this.router.url === '/login' || this.router.url === '/sign-up') {
-            this.router.navigate(['home']);
-          }
-        } else {
-          this.router.navigate(['sign-up']);
-        }
-        callback();
+        this.router.navigate(['']);
+
+        //callback();
         this.onLoggedIn.next();
       } else {
         // this.router.navigate(['login']);
@@ -36,13 +30,13 @@ export class LoginService {
 
   signIn(user) {
     firebase.auth().signInWithEmailAndPassword(user.email, user.password)
-      .then(res => {})
-      .catch(err => console.log(err));
+      .then(res => { })
+      .catch(err => alert(err));
   }
 
   signUp(user) {
     firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-      .then(res => {})
+      .then(res => { })
       .catch(err => console.log(err));
   }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
+import { LoginService } from './login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import * as firebase from 'firebase';
 export class AppComponent implements OnInit {
   title = 'app';
 
+  constructor(private loginService: LoginService) { }
   ngOnInit() {
     firebase.initializeApp({
       apiKey: 'AIzaSyAzOsKr0MxdHru5dBMoVGIzLyxv_NaL9P4',
@@ -18,5 +20,13 @@ export class AppComponent implements OnInit {
       storageBucket: 'bondira-c1ac5.appspot.com"',
       messagingSenderId: '374809673650'
     });
+    this.loginService.init();
+    this.loginService.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('phone-sign-in-recaptcha', {
+      'size': 'invisible',
+      'callback': function (response) {
+        // reCAPTCHA solved, allow signInWithPhoneNumber.
+      }
+    });
   }
+
 }

@@ -1,0 +1,12 @@
+<form #form="ngForm">
+  <div class="form-group">
+    <label for="phone">Phone:</label>
+    <input type="phone" name="phone" ngModel class="form-control" >
+  </div>
+  <div class="form-group" *ngIf="signIn">
+    <label for="pwd">OTP:</label>
+    <input type="text" name="OTP" ngModel class="form-control">
+  </div>
+  <button type="button" class="btn btn-primary" (click)="sendOTP(form)" *ngIf="!signIn">Send OTP</button>
+  <button type="button" class="btn btn-primary" (click)="onSignIn(form)" *ngIf="signIn">Sign In</button>
+</form>
