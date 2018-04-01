@@ -1,0 +1,8 @@
+hr{
+    background-color: black;
+}
+.li-element{
+    background-color: #212121 !important;
+    cursor: pointer;
+    color: blue;
+}
