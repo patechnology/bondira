@@ -1,3 +1,44 @@
-<p>
-  new-order works!
-</p>
+<div class="row login">
+  <div class="col-md-6">
+    <form (ngSubmit)="signIn(form)" #form="ngForm">
+      <div class="form-group">
+        <label for="name">Customer name:</label>
+        <input type="text" name="name" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phone1">Customer phone 1:</label>
+        <input type="text" name="phone1" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="phone2">Customer phone 2:</label>
+        <input type="text" name="phone2" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="cost">Total trip cost:</label>
+        <input type="text" name="cost" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="from">From:</label>
+        <input type="text" name="from" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="destination">Destination:</label>
+        <input type="text" name="destination" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tripDetails">Trip Details:</label>
+        <textarea type="text" name="tripDetails" ngModel class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="tripDetails">Must have:</label>
+        <input type="text" name="mustHave" ngModel class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="tripDetails">Prefer to have:</label>
+        <input type="text" name="preferToHave" ngModel class="form-control">
+      </div>
+      <button type="submit" class="btn btn-danger">Cancel</button>
+      <button type="button" class="btn btn-primary" (click)="signIn(form)">Done</button>
+    </form>
+  </div>
+</div>

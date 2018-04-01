@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
 import { LoginService } from './login/login.service';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,9 @@ import { LoginService } from './login/login.service';
 export class AppComponent implements OnInit {
   title = 'app';
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService,
+    private dataService: DataService) { }
+
   ngOnInit() {
     firebase.initializeApp({
       apiKey: 'AIzaSyAzOsKr0MxdHru5dBMoVGIzLyxv_NaL9P4',
@@ -20,7 +23,9 @@ export class AppComponent implements OnInit {
       storageBucket: 'bondira-c1ac5.appspot.com"',
       messagingSenderId: '374809673650'
     });
-    this.loginService.init();
+    this.loginService.init(() => {
+      this.dataService.init();
+    });
     this.loginService.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('phone-sign-in-recaptcha', {
       'size': 'invisible',
       'callback': function (response) {
