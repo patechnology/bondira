@@ -12,6 +12,12 @@ import { HomeComponent } from './home/home.component';
 import { LoginService } from './login/login.service';
 import { PhoneComponent } from './login/phone/phone.component';
 import { DriverComponent } from './driver/driver.component';
+import { NewOrderComponent } from './rider/new-order/new-order.component';
+import { MyOrderComponent } from './rider/my-order/my-order.component';
+import { MyBizComponent } from './rider/my-biz/my-biz.component';
+import { MyBizDriverComponent } from './driver/my-biz-driver/my-biz-driver.component';
+import { LastAcceptedComponent } from './driver/last-accepted/last-accepted.component';
+import { MarketComponent } from './driver/market/market.component';
 
 
 @NgModule({
@@ -22,7 +28,13 @@ import { DriverComponent } from './driver/driver.component';
     CommentComponent,
     HomeComponent,
     PhoneComponent,
-    DriverComponent
+    DriverComponent,
+    NewOrderComponent,
+    MyOrderComponent,
+    MyBizComponent,
+    MyBizDriverComponent,
+    LastAcceptedComponent,
+    MarketComponent
   ],
   imports: [
     BrowserModule,
